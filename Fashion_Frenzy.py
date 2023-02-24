@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 import streamlit as st
-from sklearn.cluster import KMeans
 from sklearn import datasets
+from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from sklearn.metrics import davies_bouldin_score
 from sklearn.metrics import v_measure_score
