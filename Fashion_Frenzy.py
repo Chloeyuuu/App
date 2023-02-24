@@ -15,7 +15,7 @@ st.set_page_config(page_title="Fashion Frenzy 🛍", page_icon=":dress:")
 
 
 # Add your logo and title
-logo = Image.open("/Users/jiaheyu/Desktop/Data_analytics/Logo")
+logo = Image.open("Logo")
 
 
 # Create a two-column layout
@@ -31,19 +31,19 @@ with col2:
     st.subheader("Welcome to our shopping website!!")
 
 # Display the animation
-video_file = open('/Users/jiaheyu/Desktop/Data_analytics/animation.mp4', 'rb')
+video_file = open('animation.mp4', 'rb')
 video_bytes = video_file.read()
 st.video(video_bytes)
 
 # Load the CSV files
 csv_files = {
-    'Hot selling🔥!!': '/Users/jiaheyu/Desktop/Data_analytics/cluster0.csv',
-    'Bags👜': '/Users/jiaheyu/Desktop/Data_analytics/cluster1.csv',
-    'Flats & Sneakers👟': '/Users/jiaheyu/Desktop/Data_analytics/cluster2.csv',
-    'Bottoms & Dresses👗': '/Users/jiaheyu/Desktop/Data_analytics/cluster3.csv',
-    'Sweats🥼': '/Users/jiaheyu/Desktop/Data_analytics/cluster4.csv',
-    'Tops👚': '/Users/jiaheyu/Desktop/Data_analytics/cluster5.csv',
-    'Boots & Heels👢': '/Users/jiaheyu/Desktop/Data_analytics/cluster6.csv',
+    'Hot selling🔥!!': 'cluster0.csv',
+    'Bags👜': 'cluster1.csv',
+    'Flats & Sneakers👟': 'cluster2.csv',
+    'Bottoms & Dresses👗': 'cluster3.csv',
+    'Sweats🥼': 'cluster4.csv',
+    'Tops👚': 'cluster5.csv',
+    'Boots & Heels👢': 'cluster6.csv',
 }
 
 dfs = {}
@@ -109,7 +109,7 @@ if search_button:
 # Define a function to calculate clustering metrics
 def calculate_metrics(k, data):
     # Load true labels
-    true_labels_df = pd.read_csv('/Users/jiaheyu/Desktop/Data_analytics/true_label.csv')
+    true_labels_df = pd.read_csv('true_label.csv')
 
     # Extract labels as a list
     true_labels = true_labels_df['label'].tolist()
@@ -145,7 +145,7 @@ def calculate_metrics(k, data):
     st.write('V-measure Score:', v_measure)
 
 # Load the data
-data = pd.read_csv('/Users/jiaheyu/Desktop/Data_analytics/product_images.csv')
+data = pd.read_csv('product_images.csv')
 
 # Call the function to calculate clustering metrics
 calculate_metrics(7, data)
