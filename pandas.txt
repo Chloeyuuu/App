@@ -2,4 +2,4 @@ pandas
 numpy
 PIL
 streamlit
-sklearn
+scikit-learn
