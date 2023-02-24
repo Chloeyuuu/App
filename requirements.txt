@@ -1,5 +1,5 @@
 pandas
 numpy
-PIL
+Image
 streamlit
-sklearn
+scikit-learn
